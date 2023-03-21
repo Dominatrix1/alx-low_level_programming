@@ -3,28 +3,39 @@
 /**
  * times_table - prints the 9 times table
  *
- * Return: void
+ * Return: empty
 */
 
 void times_table(void)
 
 {
-	int digit, mult, result;
+	int x, y, z, u, d;
 
-	for (digit = 0; digit <= 9; digit++)
+	for (x = 0; x <= 9; x++)
 {
-	_putchar('0';
-	for (mult = 1; mult <= 9; mult++)
+	for (y = 0; y <= 9; y++)
 {
-	_putchar(',');
-	_putchar(' ');
-	result = digit * mult;
-	if (result <= 9)
-	_putchar(' ');
-	else
-	_putchar((result / 10) + '0');
-	_putchar((result % 10) + '0');
+	z = x + y;
+	if (z > 9)
+{
+	u = z % 10;
+	d = (z - u) / 10;
+	_putchar(44);
+	_putchar(32);
+	_putchar(d + '0');
+	_putchar(u + '0');
 }
-_putchar('\n');
+	else
+{
+	if (y != 0)
+	{
+	_putchar(44);
+	_putchar(32);
+	_putchar(32);
+	}
+	_putchar(z + '0');
+}
+}
+	_putchar('\n');
 }
 }
